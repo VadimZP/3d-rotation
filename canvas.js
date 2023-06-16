@@ -30,9 +30,7 @@ function point(coords) {
   const { x, y } = coords;
 
   const newX = x < 0 ? lerpNegativeX(Math.abs(x)) : lerpX(x);
-  console.log("🚀 ~ file: canvas.js:33 ~ point ~ newX", newX);
   const newY = y < 0 ? lerpNegativeY(Math.abs(y)) : lerpY(y);
-  console.log("🚀 ~ file: canvas.js:34 ~ point ~ newY", newY);
 
   ctx.strokeRect(newX, newY, 2, 2);
 }
@@ -106,8 +104,6 @@ btn.addEventListener("click", () => {
     return {
       x: (x * 2) / (z - 2),
       y: (y * 2) / (z - 2),
-      // x: (x * 2) / (z - 2),
-      // y: (y * 2) / (z - 2),
     };
   }
 });
